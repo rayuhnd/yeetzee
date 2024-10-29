@@ -31,21 +31,21 @@ def score_sheet():
     print("Current score sheet")
     
     dictionary = {
-    "Ones:": [],
-    "Twos:": [],
-    "Threes:": [],
-    "Fours:": [],
-    "Fives:": [],
-    "Sixes:": [],
-    "One Pair:": [],
-    "Two Pairs:": [],
-    "Three of a Kind:": [],
-    "Four of a Kind:": [],
-    "Small Straight:": [],
-    "Large Straight:": [],
-    "Full House:": [],
-    "Chance:": [],
-    "Yatzy:": [],
+    "Ones:": "-",
+    "Twos:": "-",
+    "Threes:": "-",
+    "Fours:": "-",
+    "Fives:": "-",
+    "Sixes:": "-",
+    "One Pair:": "-",
+    "Two Pairs:": "-",
+    "Three of a Kind:": "-",
+    "Four of a Kind:": "-",
+    "Small Straight:": "-",
+    "Large Straight:": "-",
+    "Full House:": "-",
+    "Chance:": "-",
+    "Yatzy:": "-",
     }
   
     for key, value in dictionary.items():  
@@ -53,3 +53,49 @@ def score_sheet():
             print(f"{key} {value}")
         
     
+"""
+def categories():
+
+
+def single_player_mode(): 
+
+    rolls=0
+    user=str(input('Do you want to roll the dice? (Yes,No): '))
+    roll=dice_rolls(user)#slaget
+
+    while rolls < 3:
+
+        #slag #2, #3
+        elif rolls >= 1:
+
+            user_re_roll=input('choose dice to keep with index: ')
+            split_re_roll=user_re_roll.split() 
+            lst_keep=[]
+            #appendar lst_keep med inedx i roll
+            for index in split_re_roll:
+                if int(index) - 1 < len(roll): 
+                    lst_keep.append(roll[int(index) - 1]) 
+            print(lst_keep)
+
+            #rullar om index som inte är i keep 
+            roll = []
+            for i in lst_keep: 
+                roll.append(i) 
+
+            for i in range(5-len(roll)):
+                rand = random.randint(1,6) 
+                roll.append(rand)
+            print(roll)
+
+            rolls+=1
+
+        #slag #1
+        elif user.lower() == 'yes':
+            for i in range(1): 
+                print(roll) 
+
+                rolls+=1 
+    print('roll count:',rolls)
+
+single_player_mode()
+"""
