@@ -1,0 +1,55 @@
+import random as r
+
+def roll_dice():
+    return [r.randint(1, 6) for _ in range(5)] 
+
+def single_player_mode(): 
+    print("Welcome to Single Player Mode!")
+    
+    while True:   
+        input("Press Enter to roll the dice...")
+    
+        dice = roll_dice()
+        
+        print(f"You rolled: {dice}")
+        
+        play_again = input("Do you want to roll again? (y/n) ")
+        
+        if play_again.lower() == 'n':
+            print("You chose to keep all")
+            score = score_sheet()
+                       
+            
+        elif play_again.lower() == 'y':      
+            print("Rolling again...")           
+        else:   
+            print("Invalid input. Please enter 'y', 'n', or press Enter.")
+
+
+def score_sheet():
+
+    print("Current score sheet")
+    
+    dictionary = {
+    "Ones:": [],
+    "Twos:": [],
+    "Threes:": [],
+    "Fours:": [],
+    "Fives:": [],
+    "Sixes:": [],
+    "One Pair:": [],
+    "Two Pairs:": [],
+    "Three of a Kind:": [],
+    "Four of a Kind:": [],
+    "Small Straight:": [],
+    "Large Straight:": [],
+    "Full House:": [],
+    "Chance:": [],
+    "Yatzy:": [],
+    }
+  
+    for key, value in dictionary.items():  
+        
+            print(f"{key} {value}")
+        
+    
